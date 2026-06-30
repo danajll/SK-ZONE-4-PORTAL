@@ -1,0 +1,31 @@
+.container{
+
+    width:min(90%,var(--container));
+
+    margin:auto;
+
+}
+
+section{
+
+padding:40px 0;
+
+}
+
+.grid{
+
+    display:grid;
+
+}
+
+.flex{
+
+    display:flex;
+
+}
+
+main{
+
+    padding-top:82px;
+
+}
