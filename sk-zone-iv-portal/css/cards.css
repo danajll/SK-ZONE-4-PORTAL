@@ -719,3 +719,57 @@
     color:#94A3B8;
 
 }
+
+/* ===========================
+   Lucide Icons
+=========================== */
+
+.stat-icon i,
+.download-icon i{
+
+    width:34px;
+
+    height:34px;
+
+    stroke-width:2.2;
+
+    color:var(--primary);
+
+    transition:var(--transition);
+
+}
+
+.stat-card:hover .stat-icon i,
+.download-card:hover .download-icon i{
+
+    transform:scale(1.15) rotate(-8deg);
+
+    color:var(--accent);
+
+}
+
+/* Premium Hover Effects */
+
+.stat-card,
+.program-card,
+.download-card,
+.budget-card,
+.news-card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.stat-card:hover,
+.program-card:hover,
+.download-card:hover,
+.budget-card:hover,
+.news-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}

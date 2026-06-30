@@ -16,6 +16,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
     <!-- Main CSS -->
 
     <link rel="stylesheet" href="css/style.css">
@@ -98,10 +100,12 @@
 
         <div class="stats-grid">
 
-            <div class="stat-card">
+            <div class="stat-card"
+                data-aos="fade-up"
+                data-aos-delay="0">
 
                 <div class="stat-icon">
-                    💰
+                    <i data-lucide="wallet"></i>
                 </div>
 
                 <h2>₱4.2M</h2>
@@ -110,10 +114,12 @@
 
             </div>
 
-            <div class="stat-card">
+            <div class="stat-card"
+                data-aos="fade-up"
+                data-aos-delay="100">
 
                 <div class="stat-icon">
-                    👥
+                    <i data-lucide="users"></i>
                 </div>
 
                 <h2>12+</h2>
@@ -122,10 +128,12 @@
 
             </div>
 
-            <div class="stat-card">
+            <div class="stat-card"
+                data-aos="fade-up"
+                data-aos-delay="200">
 
                 <div class="stat-icon">
-                    🎓
+                    <i data-lucide="graduation-cap"></i>
                 </div>
 
                 <h2>850</h2>
@@ -134,10 +142,12 @@
 
             </div>
 
-            <div class="stat-card">
+            <div class="stat-card"
+                data-aos="fade-up"
+                data-aos-delay="300">
 
                 <div class="stat-icon">
-                    ✔️
+                    <i data-lucide="badge-check"></i>
                 </div>
 
                 <h2>24</h2>
@@ -160,7 +170,8 @@
 
             <!-- Budget Card -->
 
-            <div class="budget-card">
+            <div class="budget-card"
+                data-aos="fade-right">
 
                 <div class="section-header">
 
@@ -244,7 +255,8 @@
 
             <!-- News -->
 
-            <div class="news-card">
+            <div class="news-card"
+                data-aos="fade-left">
 
                 <h2>Latest News</h2>
 
@@ -303,7 +315,10 @@
 
         <div class="program-grid">
 
-            <article class="program-card">
+            <article
+                class="program-card"
+                data-aos="zoom-in"
+                data-aos-delay="0">
 
                 <img src="assets/images/program1.jpg" alt="Education">
 
@@ -326,7 +341,7 @@
 
             </article>
 
-            <article class="program-card">
+            <article class="program-card" data-aos-delay="150" > 
 
                 <img src="assets/images/program2.jpg" alt="Sports">
 
@@ -349,7 +364,7 @@
 
             </article>
 
-            <article class="program-card">
+            <article class="program-card" data-aos-delay="300" >
 
                 <img src="assets/images/program3.jpg" alt="Health">
 
@@ -398,11 +413,14 @@
 
             <!-- Card -->
 
-            <div class="download-card">
+            <div
+                class="download-card"
+                data-aos="fade-up"
+                data-aos-delay="100">
 
                 <div class="download-icon">
 
-                    📄
+                    <i data-lucide="file-text"></i>
 
                 </div>
 
@@ -422,11 +440,14 @@
 
             </div>
 
-            <div class="download-card">
+            <div
+                class="download-card"
+                data-aos="fade-up"
+                data-aos-delay="100">
 
                 <div class="download-icon">
 
-                    📘
+                    <i data-lucide="book-open"></i>
 
                 </div>
 
@@ -446,11 +467,14 @@
 
             </div>
 
-            <div class="download-card">
+            <div
+                class="download-card"
+                data-aos="fade-up"
+                data-aos-delay="100">
 
                 <div class="download-icon">
 
-                    📗
+                    <i data-lucide="book-copy"></i>
 
                 </div>
 
@@ -470,11 +494,14 @@
 
             </div>
 
-            <div class="download-card">
+            <div
+                class="download-card"
+                data-aos="fade-up"
+                data-aos-delay="100">
 
                 <div class="download-icon">
 
-                    📑
+                    <i data-lucide="folder-open"></i>
 
                 </div>
 
@@ -500,7 +527,7 @@
 
 </section>
 
-<section id="social" class="social-section">
+<section id="social" class="social-section" data-aos="zoom-in">
 
     <div class="container">
 
@@ -552,7 +579,7 @@
 
 </main>
 
-<footer class="footer">
+<footer class="footer" data-aos="fade-up">
 
     <div class="container footer-grid">
 
@@ -618,6 +645,23 @@
 
 <script src="js/navbar.js"></script>
 <script src="js/main.js"></script>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+lucide.createIcons();
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 900,
+    easing: "ease-out-cubic",
+    once: true,
+    offset: 120
+});
+</script>
 
 </body>
 
