@@ -1,0 +1,33 @@
+h1,h2,h3,h4,h5,h6{
+
+    font-family:var(--font-heading);
+
+    font-weight:700;
+
+}
+
+h1{
+
+    font-size:64px;
+
+}
+
+h2{
+
+    font-size:42px;
+
+}
+
+h3{
+
+    font-size:28px;
+
+}
+
+p{
+
+    line-height:1.7;
+
+    color:var(--text-light);
+
+}
