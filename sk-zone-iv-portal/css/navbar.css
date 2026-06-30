@@ -10,7 +10,7 @@
 
     z-index:999;
 
-    transition:.35s;
+    transition:var(--transition);
 
 }
 

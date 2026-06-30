@@ -22,7 +22,7 @@
 
     gap:30px;
 
-    transition:.35s;
+    transition:var(--transition);
 
     box-shadow:var(--shadow-md);
 
@@ -52,7 +52,7 @@ padding:12px;
 
 .hero-image{
 
-border-radius:18px;
+border-radius:var(--radius-sm);
 
 }
 

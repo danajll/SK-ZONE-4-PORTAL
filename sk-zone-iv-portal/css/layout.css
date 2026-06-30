@@ -1,8 +1,8 @@
 .container{
 
-    width:min(90%,var(--container));
+width:min(92%,1320px);
 
-    margin:auto;
+margin:auto;
 
 }
 
@@ -27,5 +27,25 @@ padding:40px 0;
 main{
 
     padding-top:82px;
+
+}
+
+.section-title{
+
+max-width:700px;
+
+margin:auto;
+
+margin-bottom:70px;
+
+text-align:center;
+
+}
+
+img{
+
+user-select:none;
+
+-webkit-user-drag:none;
 
 }
