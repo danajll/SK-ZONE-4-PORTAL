@@ -9,23 +9,20 @@
 
     width:100%;
 
-    min-height:clamp(600px,85vh,1080px);
+    height:100vh;
 
     overflow:hidden;
-
-    background:#0057B8;
 
 }
 
 .hero-container{
 
     position:relative;
-
     width:100%;
-
     height:100%;
 
 }
+
 
 /* ================================
    HERO IMAGE / GIF
@@ -70,13 +67,17 @@
    SCROLL INDICATOR
 ================================ */
 
+/* ==========================
+   Scroll Indicator
+========================== */
+
 .scroll-indicator{
 
     position:absolute;
 
     left:50%;
 
-    bottom:30px;
+    bottom:35px;
 
     transform:translateX(-50%);
 
@@ -86,35 +87,18 @@
 
     align-items:center;
 
-    gap:8px;
+    text-align:center;
 
-    color:#fff;
+    color:#ffffff;
 
-    z-index:5;
+}
+
+.scroll-arrow{
 
     animation:bounce 2s infinite;
 
 }
 
-.scroll-indicator span{
-
-    font-size:.85rem;
-
-    font-weight:500;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-}
-
-.scroll-indicator i{
-
-    width:28px;
-
-    height:28px;
-
-}
 
 /* ================================
    BOUNCE
@@ -124,13 +108,13 @@
 
     0%,100%{
 
-        transform:translateX(-50%) translateY(0);
+        transform:translateY(0);
 
     }
 
     50%{
 
-        transform:translateX(-50%) translateY(8px);
+        transform:translateY(10px);
 
     }
 
@@ -167,3 +151,4 @@
     z-index:4;
 
 }
+
