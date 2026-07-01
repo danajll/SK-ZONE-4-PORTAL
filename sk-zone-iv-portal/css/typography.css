@@ -1,33 +1,203 @@
-h1,h2,h3,h4,h5,h6{
+/* ===================================
+   TYPOGRAPHY
+   SK Barangay Zone IV Portal v2.0
+=================================== */
+
+/* Base */
+
+body{
+
+    font-family:var(--font-body);
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    color:var(--text);
+
+}
+
+/* ================================
+   HEADINGS
+================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
 
     font-family:var(--font-heading);
 
     font-weight:700;
 
+    line-height:1.2;
+
+    color:var(--text);
+
 }
+
+/* Hero */
 
 h1{
 
-font-size:clamp(3rem,6vw,5.5rem);
+    font-size:clamp(3rem,6vw,5rem);
 
 }
+
+/* Section Titles */
 
 h2{
 
-font-size:clamp(2rem,4vw,3rem);
+    font-size:clamp(2rem,4vw,3rem);
 
 }
+
+/* Card Titles */
 
 h3{
 
-    font-size:28px;
+    font-size:1.55rem;
 
 }
 
+/* Small Titles */
+
+h4{
+
+    font-size:1.2rem;
+
+}
+
+h5{
+
+    font-size:1rem;
+
+}
+
+h6{
+
+    font-size:.875rem;
+
+}
+
+/* ================================
+   PARAGRAPHS
+================================ */
+
 p{
 
-    line-height:1.7;
+    font-size:1rem;
+
+    line-height:1.8;
 
     color:var(--text-light);
+
+}
+
+/* ================================
+   LINKS
+================================ */
+
+a{
+
+    transition:var(--transition);
+
+}
+
+/* ================================
+   SMALL TEXT
+================================ */
+
+small{
+
+    font-size:.875rem;
+
+    color:var(--text-light);
+
+}
+
+/* ================================
+   STRONG
+================================ */
+
+strong{
+
+    font-weight:700;
+
+}
+
+/* ================================
+   BUTTON TEXT
+================================ */
+
+button,
+
+.btn{
+
+    font-family:var(--font-heading);
+
+    font-weight:600;
+
+    font-size:1rem;
+
+}
+
+/* ================================
+   UTILITIES
+================================ */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-left{
+
+    text-align:left;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+.text-primary{
+
+    color:var(--primary);
+
+}
+
+.text-accent{
+
+    color:var(--accent);
+
+}
+
+.text-light{
+
+    color:var(--text-light);
+
+}
+
+.uppercase{
+
+    text-transform:uppercase;
+
+}
+
+.capitalize{
+
+    text-transform:capitalize;
+
+}
+
+.bold{
+
+    font-weight:700;
 
 }

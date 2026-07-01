@@ -1,40 +1,59 @@
+/* ===================================
+   NAVBAR
+   SK Barangay Zone IV Portal v2.0
+=================================== */
+
+/* ===================================
+   HEADER
+=================================== */
+
 .header{
 
     position:fixed;
 
     top:0;
-
     left:0;
 
     width:100%;
 
-    z-index:999;
+    z-index:1000;
 
-    transition:var(--transition);
+    transition:all .35s ease;
 
 }
+
+/* Header after scrolling */
 
 .header.scrolled{
 
-    background:rgba(255,255,255,.92);
+    background:rgba(255,255,255,.82);
 
     backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
-    box-shadow:var(--shadow-sm);
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
 
 }
+
+/* ===================================
+   NAVBAR
+=================================== */
 
 .navbar{
 
-    height:82px;
+    height:78px;
 
     display:flex;
 
-    align-items:center;
-
     justify-content:space-between;
 
+    align-items:center;
+
 }
+
+/* ===================================
+   LOGO
+=================================== */
 
 .logo{
 
@@ -48,7 +67,9 @@
 
 .logo img{
 
-    width:58px;
+    width:60px;
+
+    height:auto;
 
 }
 
@@ -62,11 +83,13 @@
 
 .small-text{
 
-    font-size:.78rem;
+    font-size:.72rem;
 
-    color:var(--text-light);
+    font-weight:500;
 
-    font-weight:600;
+    color:#F8FAFC;
+
+    transition:var(--transition);
 
 }
 
@@ -74,17 +97,47 @@
 
     font-family:var(--font-heading);
 
-    font-weight:700;
-
     font-size:1rem;
 
+    font-weight:700;
+
+    color:#FFFFFF;
+
+    transition:var(--transition);
+
 }
+
+/* Change logo text after scroll */
+
+.header.scrolled .small-text{
+
+    color:var(--text-light);
+
+}
+
+.header.scrolled .large-text{
+
+    color:var(--text);
+
+}
+
+/* ===================================
+   NAVIGATION
+=================================== */
 
 .nav-links{
 
     display:flex;
 
-    gap:40px;
+    align-items:center;
+
+    gap:34px;
+
+}
+
+.nav-links li{
+
+    position:relative;
 
 }
 
@@ -92,17 +145,35 @@
 
     position:relative;
 
+    font-family:var(--font-heading);
+
+    font-size:.95rem;
+
     font-weight:600;
 
-    transition:.3s;
+    color:#FFFFFF;
+
+    transition:var(--transition);
 
 }
+
+/* Text after scroll */
+
+.header.scrolled .nav-links a{
+
+    color:var(--text);
+
+}
+
+/* Hover */
 
 .nav-links a:hover{
 
-    color:var(--primary);
+    color:var(--accent);
 
 }
+
+/* Active Line */
 
 .nav-links a::after{
 
@@ -110,42 +181,104 @@
 
     position:absolute;
 
-    left:0;
+    bottom:-10px;
 
-    bottom:-8px;
+    left:50%;
+
+    transform:translateX(-50%);
 
     width:0;
 
     height:3px;
 
+    border-radius:999px;
+
     background:var(--accent);
 
-    border-radius:50px;
-
-    transition:.3s;
+    transition:var(--transition);
 
 }
 
 .nav-links a:hover::after,
 
-.nav-links .active::after{
+.nav-links a.active::after{
 
     width:100%;
 
 }
 
-.nav-links .active{
-
-    color:var(--primary);
-
-}
+/* ===================================
+   MOBILE MENU BUTTON
+=================================== */
 
 .menu-toggle{
 
     display:none;
 
-    background:none;
+    width:46px;
 
-    font-size:28px;
+    height:46px;
+
+    border-radius:12px;
+
+    color:#FFFFFF;
+
+    font-size:1.5rem;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:var(--transition);
+
+}
+
+/* Scroll */
+
+.header.scrolled .menu-toggle{
+
+    color:var(--text);
+
+}
+
+.menu-toggle:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+/* ===================================
+   NAVIGATION BUTTON
+=================================== */
+
+.nav-cta{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    background:#FFFFFF;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.nav-cta:hover{
+
+    background:var(--accent);
+
+    color:#FFFFFF;
+
+    transform:translateY(-2px);
 
 }

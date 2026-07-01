@@ -1,0 +1,268 @@
+/* ===================================
+   FEATURED PROGRAMS
+   SK Barangay Zone IV Portal v2.0
+=================================== */
+
+.programs{
+
+    background:#FFFFFF;
+
+}
+
+/* ===================================
+   GRID
+=================================== */
+
+.program-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+/* ===================================
+   CARD
+=================================== */
+
+.program-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:var(--surface);
+
+    border-radius:var(--radius-lg);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+    border:1px solid transparent;
+
+    transition:var(--transition);
+
+    height:100%;
+
+}
+
+.program-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+    border-color:#DCE8F5;
+
+}
+
+/* ===================================
+   IMAGE
+=================================== */
+
+.program-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    height:240px;
+
+}
+
+.program-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s ease;
+
+}
+
+.program-card:hover .program-image img{
+
+    transform:scale(1.08);
+
+}
+
+/* ===================================
+   STATUS BADGE
+=================================== */
+
+.badge{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    font-size:.80rem;
+
+    font-weight:600;
+
+    backdrop-filter:blur(8px);
+
+    -webkit-backdrop-filter:blur(8px);
+
+}
+
+.badge.active{
+
+    background:rgba(22,163,74,.15);
+
+    color:#16A34A;
+
+}
+
+.badge.ongoing{
+
+    background:rgba(0,87,184,.12);
+
+    color:var(--primary);
+
+}
+
+.badge.upcoming{
+
+    background:rgba(245,158,11,.15);
+
+    color:var(--accent);
+
+}
+
+/* ===================================
+   CONTENT
+=================================== */
+
+.program-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+    padding:26px;
+
+}
+
+.program-date{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-bottom:14px;
+
+    color:var(--text-light);
+
+    font-size:.90rem;
+
+}
+
+.program-date i{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+.program-content h3{
+
+    margin-bottom:14px;
+
+    line-height:1.35;
+
+}
+
+.program-content p{
+
+    flex:1;
+
+    margin-bottom:24px;
+
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.program-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding-top:18px;
+
+    border-top:1px solid var(--border);
+
+}
+
+.program-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.program-link i{
+
+    width:18px;
+
+    height:18px;
+
+    transition:var(--transition);
+
+}
+
+.program-card:hover .program-link{
+
+    color:var(--accent);
+
+}
+
+.program-card:hover .program-link i{
+
+    transform:translateX(5px);
+
+}
+
+/* ===================================
+   CATEGORY
+=================================== */
+
+.program-category{
+
+    font-size:.82rem;
+
+    color:var(--text-light);
+
+    font-weight:600;
+
+}

@@ -1,8 +1,21 @@
-*{
+/* ===================================
+   CSS RESET
+   SK Barangay Zone IV Portal v2.0
+=================================== */
+
+/* Box Model */
+
+*,
+*::before,
+*::after{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
+
+/* Smooth Scrolling */
 
 html{
 
@@ -10,29 +23,63 @@ html{
 
 }
 
+/* Body */
+
 body{
 
-font-family:var(--font-body);
+    font-family:var(--font-body);
 
-background:var(--background);
+    background:var(--background);
 
-color:var(--text);
+    color:var(--text);
 
-overflow-x:hidden;
+    overflow-x:hidden;
 
--webkit-font-smoothing:antialiased;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
 
-text-rendering:optimizeLegibility;
+    text-rendering:optimizeLegibility;
 
 }
 
-img{
+/* Media */
+
+img,
+picture,
+video,
+canvas,
+svg{
 
     display:block;
 
     max-width:100%;
 
 }
+
+/* Forms */
+
+input,
+button,
+textarea,
+select{
+
+    font:inherit;
+
+}
+
+/* Buttons */
+
+button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+}
+
+/* Links */
 
 a{
 
@@ -42,26 +89,69 @@ a{
 
 }
 
-button{
+/* Lists */
 
-    border:none;
-
-    cursor:pointer;
-
-    font-family:inherit;
-
-}
-
-ul{
+ul,
+ol{
 
     list-style:none;
 
 }
 
+/* Tables */
+
+table{
+
+    border-collapse:collapse;
+
+    border-spacing:0;
+
+}
+
+/* Text Selection */
+
 ::selection{
 
-background:var(--primary);
+    background:var(--primary);
 
-color:white;
+    color:#fff;
+
+}
+
+/* Focus */
+
+:focus-visible{
+
+    outline:3px solid rgba(0,87,184,.25);
+
+    outline-offset:3px;
+
+}
+
+/* Images */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+/* Remove tap highlight on mobile */
+
+a,
+button{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+/* Prevent horizontal overflow */
+
+html,
+body{
+
+    max-width:100%;
 
 }

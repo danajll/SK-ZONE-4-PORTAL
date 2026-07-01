@@ -1,0 +1,212 @@
+/* ===================================
+   DOWNLOAD CENTER
+   SK Barangay Zone IV Portal v2.0
+=================================== */
+
+.downloads{
+
+    background:#F8FAFC;
+
+}
+
+/* ===================================
+   GRID
+=================================== */
+
+.downloads-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+/* ===================================
+   CARD
+=================================== */
+
+.download-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#fff;
+
+    border-radius:var(--radius-lg);
+
+    padding:28px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.download-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+    border-color:#DCE8F5;
+
+}
+
+/* ===================================
+   FILE TYPE
+=================================== */
+
+.file-type{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:700;
+
+    font-size:1rem;
+
+    color:#fff;
+
+    margin-bottom:22px;
+
+}
+
+.pdf{
+
+    background:#E53935;
+
+}
+
+.doc{
+
+    background:#1565C0;
+
+}
+
+.xls{
+
+    background:#2E7D32;
+
+}
+
+.zip{
+
+    background:#F59E0B;
+
+}
+
+/* ===================================
+   TITLE
+=================================== */
+
+.download-card h3{
+
+    margin-bottom:14px;
+
+    line-height:1.35;
+
+}
+
+/* ===================================
+   DESCRIPTION
+=================================== */
+
+.download-card p{
+
+    color:var(--text-light);
+
+    margin-bottom:22px;
+
+    flex:1;
+
+}
+
+/* ===================================
+   META
+=================================== */
+
+.file-meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:24px;
+
+    font-size:.85rem;
+
+    color:var(--text-light);
+
+}
+
+/* ===================================
+   BUTTON
+=================================== */
+
+.download-btn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.download-btn:hover{
+
+    background:var(--accent);
+
+}
+
+.download-btn i{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+/* ===================================
+   HOVER ICON
+=================================== */
+
+.download-card:hover .file-type{
+
+    transform:rotate(-4deg) scale(1.08);
+
+    transition:var(--transition);
+
+}

@@ -1,0 +1,178 @@
+/* ===================================
+   STATISTICS
+   SK Barangay Zone IV Portal v2.0
+=================================== */
+
+.statistics{
+
+    background:var(--background);
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+.stat-card{
+
+    background:var(--surface);
+
+    border-radius:var(--radius-lg);
+
+    padding:32px;
+
+    border:1px solid transparent;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Top Accent Line */
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:var(--primary);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:var(--transition);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#DCE8F5;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.stat-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/* Icon */
+
+.stat-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:20px;
+
+    background:#EEF5FF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+    transition:var(--transition);
+
+}
+
+.stat-card:hover .stat-icon{
+
+    background:var(--primary);
+
+}
+
+.stat-icon i{
+
+    width:34px;
+
+    height:34px;
+
+    color:var(--primary);
+
+    transition:var(--transition);
+
+}
+
+.stat-card:hover .stat-icon i{
+
+    color:#fff;
+
+    transform:scale(1.1);
+
+}
+
+/* Numbers */
+
+.stat-card h2{
+
+    font-size:2.7rem;
+
+    margin-bottom:10px;
+
+    color:var(--text);
+
+    font-weight:700;
+
+}
+
+.stat-card p{
+
+    color:var(--text-light);
+
+    margin-bottom:18px;
+
+}
+
+/* Small label */
+
+.stat-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    background:#EEF5FF;
+
+    color:var(--primary);
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+}

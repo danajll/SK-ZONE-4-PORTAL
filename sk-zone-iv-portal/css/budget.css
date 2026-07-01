@@ -1,0 +1,302 @@
+/* ===================================
+   BUDGET DASHBOARD
+   SK Barangay Zone IV Portal v2.0
+=================================== */
+
+.budget-section{
+
+    background:#F8FAFC;
+
+}
+
+.budget-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:24px;
+
+    align-items:stretch;
+
+}
+
+/* ===================================
+   CARDS
+=================================== */
+
+.budget-card,
+.news-card{
+
+    background:var(--surface);
+
+    border-radius:var(--radius-lg);
+
+    padding:32px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+    border:1px solid transparent;
+
+}
+
+.budget-card:hover,
+.news-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#DCE8F5;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* ===================================
+   SECTION HEADER
+=================================== */
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+}
+
+.view-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.view-link:hover{
+
+    color:var(--accent);
+
+}
+
+/* ===================================
+   CONTENT
+=================================== */
+
+.budget-content{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+/* ===================================
+   CHART
+=================================== */
+
+.chart-container{
+
+    width:300px;
+
+    height:300px;
+
+    margin:auto;
+
+}
+
+/* ===================================
+   LEGEND
+=================================== */
+
+.budget-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.budget-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 18px;
+
+    border-radius:16px;
+
+    background:#F8FAFC;
+
+    transition:var(--transition);
+
+}
+
+.budget-item:hover{
+
+    background:#EEF5FF;
+
+}
+
+.budget-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.dot{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+}
+
+.education{
+
+    background:#0057B8;
+
+}
+
+.sports{
+
+    background:#2F80ED;
+
+}
+
+.health{
+
+    background:#7EC8FF;
+
+}
+
+.governance{
+
+    background:#DCEEFF;
+
+}
+
+.amount{
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+/* ===================================
+   NEWS
+=================================== */
+
+.news-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.news-item{
+
+    padding:20px 0;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.news-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.news-item small{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.news-item h4{
+
+    margin:10px 0;
+
+    transition:var(--transition);
+
+}
+
+.news-item:hover h4{
+
+    color:var(--primary);
+
+}
+
+.news-item p{
+
+    font-size:.95rem;
+
+}
+
+/* ===================================
+   BUTTON
+=================================== */
+
+.budget-btn{
+
+    margin-top:28px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.budget-btn:hover{
+
+    background:var(--accent);
+
+    transform:translateY(-2px);
+
+}

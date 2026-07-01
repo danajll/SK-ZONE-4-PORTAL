@@ -1,151 +1,354 @@
-@media(max-width:991px){
+/* ===================================
+   RESPONSIVE
+   SK Barangay Zone IV Portal v2.0
+=================================== */
 
-.nav-links{
+/* ===================================
+   LARGE LAPTOPS
+=================================== */
 
-    position:fixed;
+@media (max-width:1200px){
 
-    top:82px;
+    .stats-grid,
+    .services-grid,
+    .downloads-grid{
 
-    right:-100%;
+        grid-template-columns:repeat(2,1fr);
 
-    width:280px;
+    }
 
-    height:calc(100vh - 82px);
+    .program-grid{
 
-    background:white;
+        grid-template-columns:repeat(2,1fr);
 
-    display:flex;
+    }
 
-    flex-direction:column;
+    .budget-grid{
 
-    padding:40px;
+        grid-template-columns:1fr;
 
-    gap:30px;
+    }
 
-    transition:var(--transition);
+    .budget-content{
 
-    box-shadow:var(--shadow-md);
+        grid-template-columns:1fr;
 
-}
+        justify-items:center;
 
-.nav-links.show{
+        text-align:center;
 
-    right:0;
+    }
 
-}
+    .budget-list{
 
-.menu-toggle{
+        width:100%;
 
-    display:block;
+    }
 
-}
+    .footer-grid{
 
-}
+        grid-template-columns:repeat(2,1fr);
 
-@media(max-width:768px){
-
-.hero{
-
-padding:12px;
-
-}
-
-.hero-image{
-
-border-radius:var(--radius-sm);
+    }
 
 }
 
+/* ===================================
+   TABLETS
+=================================== */
+
+@media (max-width:992px){
+
+    section{
+
+        padding:60px 0;
+
+    }
+
+    .navbar{
+
+        height:72px;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:72px;
+
+        right:-100%;
+
+        width:300px;
+
+        height:calc(100vh - 72px);
+
+        background:#ffffff;
+
+        flex-direction:column;
+
+        justify-content:flex-start;
+
+        align-items:flex-start;
+
+        padding:40px 30px;
+
+        gap:24px;
+
+        box-shadow:-8px 0 30px rgba(0,0,0,.08);
+
+        transition:.35s ease;
+
+    }
+
+    .nav-links.active{
+
+        right:0;
+
+    }
+
+    .header.scrolled .nav-links{
+
+        background:#ffffff;
+
+    }
+
+    .nav-links a{
+
+        color:var(--text);
+
+        font-size:1rem;
+
+    }
+
+    .hero{
+
+        min-height:80vh;
+
+    }
+
+    .hero-image{
+
+        width:100%;
+
+        height:auto;
+
+    }
+
+    .social-card{
+
+        padding:50px 35px;
+
+    }
+
 }
 
-/* Statistics */
+/* ===================================
+   MOBILE
+=================================== */
 
-@media(max-width:1100px){
+@media (max-width:768px){
 
-.stats-grid{
+    .container{
 
-grid-template-columns:repeat(2,1fr);
+        width:min(94%,1320px);
+
+    }
+
+    .section-title{
+
+        margin-bottom:40px;
+
+    }
+
+    .grid-4,
+    .grid-3,
+    .grid-2,
+
+    .stats-grid,
+
+    .services-grid,
+
+    .program-grid,
+
+    .downloads-grid,
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .budget-content{
+
+        gap:30px;
+
+    }
+
+    .chart-container{
+
+        width:260px;
+
+        height:260px;
+
+    }
+
+    .service-card,
+
+    .stat-card,
+
+    .download-card,
+
+    .budget-card,
+
+    .news-card,
+
+    .program-card{
+
+        padding:24px;
+
+    }
+
+    .program-image{
+
+        height:220px;
+
+    }
+
+    .social-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .social-btn{
+
+        width:100%;
+
+    }
+
+    .footer-bottom-content{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
 
 }
 
-}
+/* ===================================
+   SMALL MOBILE
+=================================== */
 
-@media(max-width:650px){
+@media (max-width:576px){
 
-.stats-grid{
+    section{
 
-grid-template-columns:1fr;
+        padding:50px 0;
 
-}
+    }
 
-}
+    .hero{
 
-/* Budget */
+        min-height:70vh;
 
-@media(max-width:1100px){
+    }
 
-.budget-grid{
+    .hero-image{
 
-grid-template-columns:1fr;
+        object-fit:contain;
 
-}
+    }
 
-.budget-content{
+    .hero h1{
 
-flex-direction:column;
+        font-size:2.3rem;
 
-}
+    }
 
-}
+    h2{
 
-/* Featured Programs */
+        font-size:2rem;
 
-@media(max-width:1100px){
+    }
 
-.program-grid{
+    h3{
 
-grid-template-columns:1fr;
+        font-size:1.25rem;
 
-}
+    }
 
-}
+    .scroll-indicator{
 
-/* Downloads */
+        bottom:20px;
 
-@media(max-width:1200px){
+    }
 
-.downloads-grid{
+    .chart-container{
 
-grid-template-columns:repeat(2,1fr);
+        width:220px;
 
-}
+        height:220px;
 
-}
+    }
 
-@media(max-width:700px){
+    .footer-top{
 
-.downloads-grid{
+        padding:50px 0 35px;
 
-grid-template-columns:1fr;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.social-card{
-
-padding:45px 25px;
+    }
 
 }
 
-.social-buttons{
+/* ===================================
+   VERY SMALL DEVICES
+=================================== */
 
-flex-direction:column;
+@media (max-width:375px){
 
-align-items:center;
+    .navbar{
 
-}
+        height:68px;
+
+    }
+
+    .logo img{
+
+        width:48px;
+
+    }
+
+    .large-text{
+
+        font-size:.9rem;
+
+    }
+
+    .small-text{
+
+        font-size:.68rem;
+
+    }
+
+    .service-card,
+
+    .stat-card,
+
+    .download-card,
+
+    .budget-card,
+
+    .news-card{
+
+        padding:20px;
+
+    }
 
 }

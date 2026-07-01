@@ -1,14 +1,24 @@
+/* ===================================
+   DESIGN SYSTEM
+   SK Barangay Zone IV Portal v2.0
+=================================== */
+
 :root{
 
-    /* Colors */
+    /* ========= PRIMARY COLORS ========= */
 
     --primary:#0057B8;
     --primary-light:#2F80ED;
-    --secondary:#6EC1FF;
+    --primary-dark:#003C7D;
+
     --accent:#F59E0B;
+    --accent-hover:#D97706;
 
     --success:#16A34A;
+    --warning:#FBBF24;
     --danger:#DC2626;
+
+    /* ========= NEUTRALS ========= */
 
     --background:#F6F9FC;
     --surface:#FFFFFF;
@@ -18,33 +28,64 @@
 
     --border:#E5E7EB;
 
-    /* Fonts */
+    /* ========= GRADIENTS ========= */
+
+    --gradient-primary:
+    linear-gradient(
+        135deg,
+        #0057B8,
+        #2F80ED
+    );
+
+    --gradient-accent:
+    linear-gradient(
+        135deg,
+        #F59E0B,
+        #FBBF24
+    );
+
+    /* ========= TYPOGRAPHY ========= */
 
     --font-heading:"Poppins",sans-serif;
     --font-body:"Inter",sans-serif;
 
-    /* Radius */
+    /* ========= SPACING ========= */
 
-    --radius-xs:10px;
-    --radius-sm:16px;
-    --radius-md:24px;
-    --radius-lg:32px;
+    --space-1:8px;
+    --space-2:12px;
+    --space-3:16px;
+    --space-4:24px;
+    --space-5:32px;
+    --space-6:40px;
+    --space-7:48px;
+    --space-8:64px;
+    --space-9:80px;
 
-    /* Shadows */
+    /* ========= BORDER RADIUS ========= */
 
-    --shadow-xs:0 3px 10px rgba(0,0,0,.04);
+    --radius-sm:14px;
+    --radius-md:20px;
+    --radius-lg:28px;
+    --radius-xl:36px;
+    --radius-pill:999px;
 
-    --shadow-sm:0 8px 20px rgba(0,0,0,.05);
+    /* ========= SHADOWS ========= */
 
-    --shadow-md:0 20px 40px rgba(0,0,0,.08);
+    --shadow-sm:
+        0 6px 20px rgba(15,23,42,.05);
 
-    --shadow-lg:0 30px 80px rgba(0,0,0,.12);
+    --shadow-md:
+        0 15px 35px rgba(15,23,42,.08);
 
-    /* Transition */
+    --shadow-lg:
+        0 25px 60px rgba(15,23,42,.12);
 
-    --transition:var(--transition) cubic-bezier(.4,0,.2,1);
+    /* ========= TRANSITIONS ========= */
 
-    /* Layout */
+    --transition:
+        .35s cubic-bezier(.4,0,.2,1);
+
+    /* ========= CONTAINER ========= */
 
     --container:1320px;
 

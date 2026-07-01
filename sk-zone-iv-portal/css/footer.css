@@ -1,0 +1,258 @@
+/* ===================================
+   FOOTER
+   SK Barangay Zone IV Portal v2.0
+=================================== */
+
+.footer{
+
+    background:#0F172A;
+
+    color:#E2E8F0;
+
+}
+
+/* ===================================
+   MAIN FOOTER
+=================================== */
+
+.footer-top{
+
+    padding:70px 0 50px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:50px;
+
+}
+
+/* ===================================
+   BRAND
+=================================== */
+
+.footer-brand{
+
+    max-width:360px;
+
+}
+
+.footer-logo{
+
+    width:72px;
+
+    margin-bottom:20px;
+
+}
+
+.footer-brand h3{
+
+    color:#FFFFFF;
+
+    margin-bottom:12px;
+
+}
+
+.footer-brand p{
+
+    color:#94A3B8;
+
+    line-height:1.8;
+
+}
+
+/* ===================================
+   HEADINGS
+=================================== */
+
+.footer h4{
+
+    color:#FFFFFF;
+
+    margin-bottom:20px;
+
+    font-size:1.05rem;
+
+}
+
+/* ===================================
+   LINKS
+=================================== */
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.footer-links a{
+
+    color:#94A3B8;
+
+    transition:var(--transition);
+
+}
+
+.footer-links a:hover{
+
+    color:#FFFFFF;
+
+    transform:translateX(4px);
+
+}
+
+/* ===================================
+   CONTACT
+=================================== */
+
+.footer-contact{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.footer-contact li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    color:#94A3B8;
+
+}
+
+.footer-contact i{
+
+    width:18px;
+
+    height:18px;
+
+    color:var(--accent);
+
+    margin-top:2px;
+
+}
+
+/* ===================================
+   SOCIAL
+=================================== */
+
+.footer-social{
+
+    display:flex;
+
+    gap:14px;
+
+    margin-top:24px;
+
+}
+
+.footer-social a{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:var(--transition);
+
+}
+
+.footer-social a:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-4px);
+
+}
+
+.footer-social i{
+
+    width:20px;
+
+    height:20px;
+
+    color:#FFFFFF;
+
+}
+
+/* ===================================
+   BOTTOM BAR
+=================================== */
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:22px 0;
+
+}
+
+.footer-bottom-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-bottom p{
+
+    color:#94A3B8;
+
+    font-size:.92rem;
+
+}
+
+.footer-bottom-links{
+
+    display:flex;
+
+    gap:24px;
+
+}
+
+.footer-bottom-links a{
+
+    color:#94A3B8;
+
+    font-size:.92rem;
+
+    transition:var(--transition);
+
+}
+
+.footer-bottom-links a:hover{
+
+    color:#FFFFFF;
+
+}
