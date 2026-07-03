@@ -1,11 +1,8 @@
-/* ===================================
-   DESIGN SYSTEM
-   SK Barangay Zone IV Portal v2.0
-=================================== */
+/* Design System */
 
 :root{
 
-    /* ========= PRIMARY COLORS ========= */
+    /* Primary Colors */
 
     --primary:#0057B8;
     --primary-light:#2F80ED;
@@ -18,7 +15,7 @@
     --warning:#FBBF24;
     --danger:#DC2626;
 
-    /* ========= NEUTRALS ========= */
+    /* Neutrals */
 
     --background:#F6F9FC;
     --surface:#FFFFFF;
@@ -28,7 +25,7 @@
 
     --border:#E5E7EB;
 
-    /* ========= GRADIENTS ========= */
+    /* Gradients */
 
     --gradient-primary:
     linear-gradient(
@@ -44,12 +41,12 @@
         #FBBF24
     );
 
-    /* ========= TYPOGRAPHY ========= */
+    /* Typography */
 
     --font-heading:"Poppins",sans-serif;
     --font-body:"Inter",sans-serif;
 
-    /* ========= SPACING ========= */
+    /* Spacing */
 
     --space-1:8px;
     --space-2:12px;
@@ -61,7 +58,7 @@
     --space-8:64px;
     --space-9:80px;
 
-    /* ========= BORDER RADIUS ========= */
+    /* Border Radius */
 
     --radius-sm:14px;
     --radius-md:20px;
@@ -69,23 +66,17 @@
     --radius-xl:36px;
     --radius-pill:999px;
 
-    /* ========= SHADOWS ========= */
+    /* Shadows */
 
-    --shadow-sm:
-        0 6px 20px rgba(15,23,42,.05);
+    --shadow-sm:0 6px 20px rgba(15,23,42,.05);
+    --shadow-md:0 15px 35px rgba(15,23,42,.08);
+    --shadow-lg:0 25px 60px rgba(15,23,42,.12);
 
-    --shadow-md:
-        0 15px 35px rgba(15,23,42,.08);
+    /* Transitions */
 
-    --shadow-lg:
-        0 25px 60px rgba(15,23,42,.12);
+    --transition:.35s cubic-bezier(.4,0,.2,1);
 
-    /* ========= TRANSITIONS ========= */
-
-    --transition:
-        .35s cubic-bezier(.4,0,.2,1);
-
-    /* ========= CONTAINER ========= */
+    /* Container */
 
     --container:1320px;
 

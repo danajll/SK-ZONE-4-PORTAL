@@ -1,11 +1,6 @@
-/* ===================================
-   RESPONSIVE
-   SK Barangay Zone IV Portal v2.0
-=================================== */
+/* Responsive Design */
 
-/* ===================================
-   LARGE LAPTOPS
-=================================== */
+/* Large Laptops */
 
 @media (max-width:1200px){
 
@@ -53,9 +48,7 @@
 
 }
 
-/* ===================================
-   TABLETS
-=================================== */
+/* Tablets */
 
 @media (max-width:992px){
 
@@ -149,9 +142,7 @@
 
 }
 
-/* ===================================
-   MOBILE
-=================================== */
+/* Mobile */
 
 @media (max-width:768px){
 
@@ -170,15 +161,10 @@
     .grid-4,
     .grid-3,
     .grid-2,
-
     .stats-grid,
-
     .services-grid,
-
     .program-grid,
-
     .downloads-grid,
-
     .footer-grid{
 
         grid-template-columns:1fr;
@@ -200,15 +186,10 @@
     }
 
     .service-card,
-
     .stat-card,
-
     .download-card,
-
     .budget-card,
-
     .news-card,
-
     .program-card{
 
         padding:24px;
@@ -243,9 +224,7 @@
 
 }
 
-/* ===================================
-   SMALL MOBILE
-=================================== */
+/* Small Mobile */
 
 @media (max-width:576px){
 
@@ -307,9 +286,7 @@
 
 }
 
-/* ===================================
-   VERY SMALL DEVICES
-=================================== */
+/* Very Small Devices */
 
 @media (max-width:375px){
 
@@ -338,13 +315,9 @@
     }
 
     .service-card,
-
     .stat-card,
-
     .download-card,
-
     .budget-card,
-
     .news-card{
 
         padding:20px;

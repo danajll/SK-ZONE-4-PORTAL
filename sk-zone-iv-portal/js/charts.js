@@ -1,85 +1,76 @@
+/* Budget Doughnut Chart */
+
 const chartCanvas = document.getElementById("budgetChart");
 
-if (chartCanvas) {
+if (!chartCanvas) return;
 
-    new Chart(chartCanvas, {
+new Chart(chartCanvas, {
 
-        type: "doughnut",
+    type: "doughnut",
 
-        data: {
+    data: {
 
-            labels: [
+        labels: [
 
-                "Education",
+            "Education",
+            "Sports",
+            "Health",
+            "Governance"
 
-                "Sports",
+        ],
 
-                "Health",
+        datasets: [{
 
-                "Governance"
+            data: [
+
+                90000,
+                88700,
+                10000,
+                250000
 
             ],
 
-            datasets: [{
+            backgroundColor: [
 
-                data: [
+                "#0057B8",
+                "#2F80ED",
+                "#7EC8FF",
+                "#DCEEFF"
 
-                    90000,
+            ],
 
-                    88700,
+            borderWidth: 0,
 
-                    10000,
+            hoverOffset: 12
 
-                    250000
+        }]
 
-                ],
+    },
 
-                backgroundColor: [
+    options: {
 
-                    "#0057B8",
+        responsive: true,
 
-                    "#2F80ED",
+        maintainAspectRatio: false,
 
-                    "#7EC8FF",
+        cutout: "70%",
 
-                    "#DCEEFF"
+        plugins: {
 
-                ],
+            legend: {
 
-                borderWidth: 0,
+                display: false
 
-                hoverOffset: 12
+            },
 
-            }]
+            tooltip: {
 
-        },
-
-        options: {
-
-            responsive: true,
-
-            maintainAspectRatio: false,
-
-            cutout: "70%",
-
-            plugins: {
-
-                legend: {
-
-                    display: false
-
-                },
-
-                tooltip: {
-
-                    enabled: true
-
-                }
+                enabled: true
 
             }
 
         }
 
-    });
+    }
 
-}
+});

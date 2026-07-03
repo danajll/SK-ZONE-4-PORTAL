@@ -1,7 +1,4 @@
-/* ===================================
-   TYPOGRAPHY
-   SK Barangay Zone IV Portal v2.0
-=================================== */
+/* Typography */
 
 /* Base */
 
@@ -17,9 +14,7 @@ body{
 
 }
 
-/* ================================
-   HEADINGS
-================================ */
+/* Headings */
 
 h1,
 h2,
@@ -38,7 +33,7 @@ h6{
 
 }
 
-/* Hero */
+/* Hero Title */
 
 h1{
 
@@ -62,7 +57,7 @@ h3{
 
 }
 
-/* Small Titles */
+/* Small Headings */
 
 h4{
 
@@ -82,9 +77,7 @@ h6{
 
 }
 
-/* ================================
-   PARAGRAPHS
-================================ */
+/* Paragraphs */
 
 p{
 
@@ -96,9 +89,7 @@ p{
 
 }
 
-/* ================================
-   LINKS
-================================ */
+/* Links */
 
 a{
 
@@ -106,9 +97,7 @@ a{
 
 }
 
-/* ================================
-   SMALL TEXT
-================================ */
+/* Small Text */
 
 small{
 
@@ -118,9 +107,7 @@ small{
 
 }
 
-/* ================================
-   STRONG
-================================ */
+/* Strong Text */
 
 strong{
 
@@ -128,12 +115,9 @@ strong{
 
 }
 
-/* ================================
-   BUTTON TEXT
-================================ */
+/* Button Text */
 
 button,
-
 .btn{
 
     font-family:var(--font-heading);
@@ -144,60 +128,16 @@ button,
 
 }
 
-/* ================================
-   UTILITIES
-================================ */
+/* Text Utilities */
 
-.text-center{
+.text-center{ text-align:center; }
+.text-left{ text-align:left; }
+.text-right{ text-align:right; }
 
-    text-align:center;
+.text-primary{ color:var(--primary); }
+.text-accent{ color:var(--accent); }
+.text-light{ color:var(--text-light); }
 
-}
-
-.text-left{
-
-    text-align:left;
-
-}
-
-.text-right{
-
-    text-align:right;
-
-}
-
-.text-primary{
-
-    color:var(--primary);
-
-}
-
-.text-accent{
-
-    color:var(--accent);
-
-}
-
-.text-light{
-
-    color:var(--text-light);
-
-}
-
-.uppercase{
-
-    text-transform:uppercase;
-
-}
-
-.capitalize{
-
-    text-transform:capitalize;
-
-}
-
-.bold{
-
-    font-weight:700;
-
-}
+.uppercase{ text-transform:uppercase; }
+.capitalize{ text-transform:capitalize; }
+.bold{ font-weight:700; }

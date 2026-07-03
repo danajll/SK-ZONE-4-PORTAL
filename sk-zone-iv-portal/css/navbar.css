@@ -1,11 +1,4 @@
-/* ===================================
-   NAVBAR
-   SK Barangay Zone IV Portal v2.0
-=================================== */
-
-/* ===================================
-   HEADER
-=================================== */
+/* Navbar */
 
 .header{
 
@@ -22,7 +15,7 @@
 
 }
 
-/* Header after scrolling */
+/* Scrolled Header */
 
 .header.scrolled{
 
@@ -35,9 +28,7 @@
 
 }
 
-/* ===================================
-   NAVBAR
-=================================== */
+/* Navbar */
 
 .navbar{
 
@@ -51,9 +42,7 @@
 
 }
 
-/* ===================================
-   LOGO
-=================================== */
+/* Logo */
 
 .logo{
 
@@ -107,7 +96,7 @@
 
 }
 
-/* Change logo text after scroll */
+/* Logo text when scrolled */
 
 .header.scrolled .small-text{
 
@@ -121,9 +110,7 @@
 
 }
 
-/* ===================================
-   NAVIGATION
-=================================== */
+/* Navigation */
 
 .nav-links{
 
@@ -157,7 +144,7 @@
 
 }
 
-/* Text after scroll */
+/* Navigation after scroll */
 
 .header.scrolled .nav-links a{
 
@@ -173,7 +160,7 @@
 
 }
 
-/* Active Line */
+/* Active underline */
 
 .nav-links a::after{
 
@@ -200,16 +187,13 @@
 }
 
 .nav-links a:hover::after,
-
 .nav-links a.active::after{
 
     width:100%;
 
 }
 
-/* ===================================
-   MOBILE MENU BUTTON
-=================================== */
+/* Mobile Menu Button */
 
 .menu-toggle{
 
@@ -233,7 +217,7 @@
 
 }
 
-/* Scroll */
+/* Menu toggle after scroll */
 
 .header.scrolled .menu-toggle{
 
@@ -247,9 +231,7 @@
 
 }
 
-/* ===================================
-   NAVIGATION BUTTON
-=================================== */
+/* CTA Button */
 
 .nav-cta{
 

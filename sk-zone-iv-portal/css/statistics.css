@@ -1,7 +1,4 @@
-/* ===================================
-   STATISTICS
-   SK Barangay Zone IV Portal v2.0
-=================================== */
+/* Statistics */
 
 .statistics{
 
@@ -18,6 +15,8 @@
     gap:24px;
 
 }
+
+/* Stat Card */
 
 .stat-card{
 
@@ -81,7 +80,7 @@
 
 }
 
-/* Icon */
+/* Stat Icon */
 
 .stat-icon{
 
@@ -153,7 +152,7 @@
 
 }
 
-/* Small label */
+/* Stat Label */
 
 .stat-label{
 

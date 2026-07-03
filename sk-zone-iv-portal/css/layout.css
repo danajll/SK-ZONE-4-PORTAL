@@ -1,11 +1,6 @@
-/* ===================================
-   LAYOUT
-   SK Barangay Zone IV Portal v2.0
-=================================== */
+/* Layout System */
 
-/* ===================================
-   CONTAINER
-=================================== */
+/* Container */
 
 .container{
 
@@ -15,7 +10,7 @@
 
 }
 
-/* Large Container (Future Dashboard Pages) */
+/* Large Container */
 
 .container-lg{
 
@@ -25,9 +20,7 @@
 
 }
 
-/* ===================================
-   SECTIONS
-=================================== */
+/* Sections */
 
 section{
 
@@ -35,7 +28,7 @@ section{
 
 }
 
-/* Hero should occupy the viewport */
+/* Hero overrides section padding */
 
 .hero{
 
@@ -43,9 +36,7 @@ section{
 
 }
 
-/* ===================================
-   SECTION HEADINGS
-=================================== */
+/* Section Headings */
 
 .section-title{
 
@@ -69,9 +60,7 @@ section{
 
 }
 
-/* ===================================
-   GRID UTILITIES
-=================================== */
+/* Grid Utilities */
 
 .grid{
 
@@ -109,9 +98,7 @@ section{
 
 }
 
-/* ===================================
-   FLEX UTILITIES
-=================================== */
+/* Flex Utilities */
 
 .flex{
 
@@ -147,9 +134,7 @@ section{
 
 }
 
-/* ===================================
-   SPACING UTILITIES
-=================================== */
+/* Spacing Utilities */
 
 .mt-1{margin-top:var(--space-1);}
 .mt-2{margin-top:var(--space-2);}
@@ -165,96 +150,27 @@ section{
 .mb-5{margin-bottom:var(--space-5);}
 .mb-6{margin-bottom:var(--space-6);}
 
-/* ===================================
-   DISPLAY UTILITIES
-=================================== */
+/* Display Utilities */
 
-.hidden{
+.hidden{display:none;}
+.block{display:block;}
+.inline{display:inline;}
+.inline-block{display:inline-block;}
 
-    display:none;
+/* Width Utilities */
 
-}
+.w-100{width:100%;}
+.h-100{height:100%;}
 
-.block{
+/* Border Radius Utilities */
 
-    display:block;
+.rounded-sm{border-radius:var(--radius-sm);}
+.rounded-md{border-radius:var(--radius-md);}
+.rounded-lg{border-radius:var(--radius-lg);}
+.rounded-xl{border-radius:var(--radius-xl);}
 
-}
+/* Shadow Utilities */
 
-.inline{
-
-    display:inline;
-
-}
-
-.inline-block{
-
-    display:inline-block;
-
-}
-
-/* ===================================
-   WIDTH UTILITIES
-=================================== */
-
-.w-100{
-
-    width:100%;
-
-}
-
-.h-100{
-
-    height:100%;
-
-}
-
-/* ===================================
-   BORDER RADIUS
-=================================== */
-
-.rounded-sm{
-
-    border-radius:var(--radius-sm);
-
-}
-
-.rounded-md{
-
-    border-radius:var(--radius-md);
-
-}
-
-.rounded-lg{
-
-    border-radius:var(--radius-lg);
-
-}
-
-.rounded-xl{
-
-    border-radius:var(--radius-xl);
-
-}
-
-/* ===================================
-   SHADOWS
-=================================== */
-
-.shadow-sm{
-
-    box-shadow:var(--shadow-sm);
-
-}
-
-.shadow-md{
-
-    box-shadow:var(--shadow-md);
-
-}
-
-.shadow-lg{
-
-    box-shadow:var(--shadow-lg);
-
-}
+.shadow-sm{box-shadow:var(--shadow-sm);}
+.shadow-md{box-shadow:var(--shadow-md);}
+.shadow-lg{box-shadow:var(--shadow-lg);}
