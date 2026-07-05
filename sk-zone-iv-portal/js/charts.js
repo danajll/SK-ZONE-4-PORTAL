@@ -2,7 +2,7 @@
 
 const chartCanvas = document.getElementById("budgetChart");
 
-if (!chartCanvas) return;
+if (chartCanvas) {
 
 new Chart(chartCanvas, {
 
@@ -74,3 +74,5 @@ new Chart(chartCanvas, {
     }
 
 });
+
+}
