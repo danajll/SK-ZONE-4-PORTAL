@@ -13,9 +13,9 @@ new Chart(chartCanvas, {
         labels: [
 
             "Education",
-            "Sports",
-            "Health",
-            "Governance"
+            "Linggo ng Kabataan",
+            "Governance & Active Citizenship",
+            "General Administration"
 
         ],
 
@@ -23,10 +23,10 @@ new Chart(chartCanvas, {
 
             data: [
 
-                90000,
-                88700,
-                10000,
-                250000
+                119000,
+                210000,
+                219380,
+                679252
 
             ],
 
