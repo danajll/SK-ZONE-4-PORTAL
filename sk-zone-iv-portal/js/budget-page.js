@@ -39,9 +39,9 @@ function initBudgetChart() {
 
             "Global Mobility",
 
-            "Active Citizenship",
+            "General Administration",
 
-            "Governance",
+            "Governance & Active Citizenship",
 
             "Social Inclusion & Equity",
 
@@ -59,27 +59,27 @@ function initBudgetChart() {
 
         values: [
 
-            20,
+            8.61,
 
-            8,
+            3.33,
 
-            6,
+            1.17,
 
-            5,
+            0.72,
 
-            12,
+            49.15,
 
-            10,
+            15.88,
 
-            5,
+            0.65,
 
-            5,
+            1.09,
 
-            8,
+            3.26,
 
-            6,
+            0.94,
 
-            15
+            15.20
 
         ],
 

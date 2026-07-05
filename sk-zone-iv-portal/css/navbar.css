@@ -112,6 +112,7 @@
 
 /* Navigation */
 
+
 .nav-links{
 
     display:flex;
@@ -119,6 +120,8 @@
     align-items:center;
 
     gap:34px;
+
+    margin-left:auto;
 
 }
 
@@ -231,36 +234,3 @@
 
 }
 
-/* CTA Button */
-
-.nav-cta{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:12px 22px;
-
-    border-radius:999px;
-
-    background:#FFFFFF;
-
-    color:var(--primary);
-
-    font-weight:600;
-
-    transition:var(--transition);
-
-}
-
-.nav-cta:hover{
-
-    background:var(--accent);
-
-    color:#FFFFFF;
-
-    transform:translateY(-2px);
-
-}
