@@ -76,6 +76,7 @@
 
 .downloads-page-hero .container{
     position:relative;
+
     z-index:2;
 }
 
@@ -84,6 +85,7 @@
 
 .downloads-page-hero .breadcrumb{
     display:flex;
+
     align-items:center;
 
     gap:10px;
@@ -143,6 +145,7 @@
     backdrop-filter:blur(10px);
 
     font-size:.82rem;
+
     font-weight:700;
 
     letter-spacing:.08em;
@@ -184,7 +187,8 @@
 .downloads-overview-grid{
     display:grid;
 
-    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
 
     gap:28px;
 }
@@ -294,7 +298,8 @@
 .document-categories-grid{
     display:grid;
 
-    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
 
     gap:24px;
 }
@@ -335,6 +340,8 @@
 }
 
 
+/* Category Icons */
+
 .document-category-icon{
     display:flex;
 
@@ -360,39 +367,47 @@
 
 .budget-category{
     background:#EEF5FF;
+
     color:#0155FD;
 }
 
 
 .plans-category{
     background:#F0F9FF;
+
     color:#0284C7;
 }
 
 
 .resolutions-category{
     background:#F5F3FF;
+
     color:#8B5CF6;
 }
 
 
 .reports-category{
     background:#ECFDF5;
+
     color:#10B981;
 }
 
 
 .procurement-category{
     background:#FFF7ED;
+
     color:#F59E0B;
 }
 
 
 .governance-category{
     background:#FDF2F8;
+
     color:#EC4899;
 }
 
+
+/* Category Content */
 
 .document-category-content{
     display:flex;
@@ -440,6 +455,8 @@
 }
 
 
+/* Category Explore Button */
+
 .category-explore-btn{
     display:flex;
 
@@ -451,6 +468,7 @@
     width:100%;
 
     margin-top:auto;
+
     padding:18px 0 0;
 
     background:transparent;
@@ -490,12 +508,13 @@
 }
 
 
-/* Document Library */
+/* Document Library Tools */
 
 .document-library-tools{
     display:grid;
 
-    grid-template-columns:minmax(0,1fr) 220px;
+    grid-template-columns:
+        minmax(0,1fr) 220px;
 
     gap:18px;
 
@@ -645,27 +664,36 @@
 }
 
 
-/* Official Documents */
+/* Official Documents Grid */
 
 .official-documents-grid{
     display:grid;
 
-    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-columns:1fr;
 
-    gap:24px;
+    gap:20px;
+
+    width:100%;
+
+    margin-top:32px;
 }
 
+
+/* Official Document Card */
 
 .official-document-card{
     display:grid;
 
-    grid-template-columns:auto minmax(0,1fr);
+    grid-template-columns:
+        72px minmax(0,1fr) auto;
 
-    gap:22px;
+    align-items:center;
 
-    min-width:0;
+    gap:26px;
 
-    padding:28px;
+    width:100%;
+
+    padding:30px 34px;
 
     background:#fff;
 
@@ -692,6 +720,8 @@
 }
 
 
+/* Document Icon */
+
 .official-document-icon{
     display:flex;
 
@@ -714,6 +744,8 @@
     height:27px;
 }
 
+
+/* Document Content */
 
 .official-document-content{
     min-width:0;
@@ -783,6 +815,8 @@
 }
 
 
+/* Document Meta */
+
 .official-document-meta{
     display:flex;
 
@@ -811,16 +845,18 @@
 }
 
 
+/* Document Actions */
+
 .official-document-actions{
     display:flex;
 
-    grid-column:1 / -1;
+    align-items:center;
 
     gap:12px;
 
-    padding-top:20px;
+    padding:0;
 
-    border-top:1px solid #EDF2F7;
+    border-top:0;
 }
 
 
@@ -841,6 +877,8 @@
     font-size:.78rem;
 
     font-weight:700;
+
+    white-space:nowrap;
 
     transition:
         transform .3s ease,
@@ -950,7 +988,8 @@
 .public-records-card{
     display:grid;
 
-    grid-template-columns:auto minmax(0,1fr);
+    grid-template-columns:
+        auto minmax(0,1fr);
 
     align-items:start;
 
@@ -1043,7 +1082,8 @@
 .document-request-card{
     display:grid;
 
-    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-columns:
+        minmax(0,1fr) auto;
 
     align-items:center;
 
@@ -1199,8 +1239,18 @@
     }
 
 
-    .official-documents-grid{
-        grid-template-columns:1fr;
+    .official-document-card{
+        grid-template-columns:
+            72px minmax(0,1fr);
+    }
+
+
+    .official-document-actions{
+        grid-column:1 / -1;
+
+        padding-top:20px;
+
+        border-top:1px solid #EDF2F7;
     }
 
 
@@ -1282,11 +1332,23 @@
 
     .official-document-card{
         grid-template-columns:1fr;
+
+        align-items:start;
+
+        gap:20px;
+
+        padding:28px;
     }
 
 
     .official-document-actions{
         grid-column:auto;
+
+        width:100%;
+
+        padding-top:20px;
+
+        border-top:1px solid #EDF2F7;
     }
 
 

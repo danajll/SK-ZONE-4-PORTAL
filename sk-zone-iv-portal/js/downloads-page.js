@@ -2,40 +2,26 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    initDocumentLibrary();
-
-});
-
-
-/* Document Library */
-
-function initDocumentLibrary() {
-
-    const searchInput =
-        document.getElementById("documentSearch");
-
-    const yearFilter =
-        document.getElementById("documentYear");
+    const categoryLinks =
+        document.querySelectorAll(".category-explore-btn");
 
     const filterButtons =
         document.querySelectorAll(".document-filter-btn");
 
-    const categoryButtons =
-        document.querySelectorAll(".category-explore-btn");
-
     const documentCards =
         document.querySelectorAll(".official-document-card");
 
-    const emptyState =
-        document.getElementById("documentEmptyState");
+    const searchInput =
+        document.querySelector(".document-search input");
+
+    const yearSelect =
+        document.querySelector(".document-year-filter select");
 
     const documentLibrary =
         document.getElementById("document-library");
 
-
-    if (!documentCards.length) {
-        return;
-    }
+    const emptyState =
+        document.querySelector(".document-empty-state");
 
 
     let activeCategory = "all";
@@ -43,113 +29,110 @@ function initDocumentLibrary() {
 
     /* Filter Documents */
 
-    function filterDocuments() {
+    function filterDocuments(){
 
         const searchValue =
             searchInput
                 ? searchInput.value.toLowerCase().trim()
                 : "";
 
+
         const selectedYear =
-            yearFilter
-                ? yearFilter.value
+            yearSelect
+                ? yearSelect.value
                 : "all";
 
 
         let visibleDocuments = 0;
 
 
-        documentCards.forEach((card) => {
+        documentCards.forEach(card => {
 
-            const documentTitle =
-                (
-                    card.getAttribute("data-document-title") || ""
-                ).toLowerCase();
+            const cardCategory =
+                card.dataset.category || "";
 
-            const documentCategory =
-                card.getAttribute("data-document-category") || "";
+            const cardYear =
+                card.dataset.year || "";
 
-            const documentYear =
-                card.getAttribute("data-document-year") || "";
+            const cardText =
+                card.textContent.toLowerCase();
 
-
-            const matchesSearch =
-                documentTitle.includes(searchValue);
 
             const matchesCategory =
                 activeCategory === "all" ||
-                documentCategory === activeCategory;
+                cardCategory === activeCategory;
+
 
             const matchesYear =
                 selectedYear === "all" ||
-                documentYear === selectedYear;
+                cardYear === selectedYear;
 
 
-            if (
-                matchesSearch &&
+            const matchesSearch =
+                searchValue === "" ||
+                cardText.includes(searchValue);
+
+
+            if(
                 matchesCategory &&
-                matchesYear
-            ) {
+                matchesYear &&
+                matchesSearch
+            ){
 
-                showDocument(card);
+                card.classList.remove("document-hidden");
 
                 visibleDocuments++;
 
-            } else {
+            }else{
 
-                hideDocument(card);
+                card.classList.add("document-hidden");
 
             }
 
         });
 
 
-        updateEmptyState(
-            emptyState,
-            visibleDocuments
-        );
+        /* Empty State */
+
+        if(emptyState){
+
+            if(visibleDocuments === 0){
+
+                emptyState.hidden = false;
+
+            }else{
+
+                emptyState.hidden = true;
+
+            }
+
+        }
 
     }
 
 
-    /* Search */
+    /* Filter Buttons */
 
-    if (searchInput) {
-
-        searchInput.addEventListener(
-            "input",
-            filterDocuments
-        );
-
-    }
-
-
-    /* Year Filter */
-
-    if (yearFilter) {
-
-        yearFilter.addEventListener(
-            "change",
-            filterDocuments
-        );
-
-    }
-
-
-    /* Category Filters */
-
-    filterButtons.forEach((button) => {
+    filterButtons.forEach(button => {
 
         button.addEventListener("click", () => {
 
+            const selectedFilter =
+                button.dataset.filter;
+
+
             activeCategory =
-                button.getAttribute("data-filter") || "all";
+                selectedFilter || "all";
 
 
-            setActiveFilter(
-                filterButtons,
-                activeCategory
-            );
+            filterButtons.forEach(filterButton => {
+
+                filterButton.classList.remove("active");
+
+            });
+
+
+            button.classList.add("active");
 
 
             filterDocuments();
@@ -159,40 +142,72 @@ function initDocumentLibrary() {
     });
 
 
-    /* Category Cards */
+    /* Explore Documents */
 
-    categoryButtons.forEach((button) => {
+    categoryLinks.forEach(link => {
 
-        button.addEventListener("click", () => {
+        link.addEventListener("click", event => {
+
+            event.preventDefault();
+
+
+            const selectedCategory =
+                link.dataset.category;
+
+
+            if(!selectedCategory){
+
+                return;
+
+            }
+
 
             activeCategory =
-                button.getAttribute("data-category") || "all";
+                selectedCategory;
 
 
-            setActiveFilter(
-                filterButtons,
-                activeCategory
-            );
+            /* Reset Search */
 
-
-            if (searchInput) {
+            if(searchInput){
 
                 searchInput.value = "";
 
             }
 
 
-            if (yearFilter) {
+            /* Reset Year */
 
-                yearFilter.value = "all";
+            if(yearSelect){
+
+                yearSelect.value = "all";
 
             }
+
+
+            /* Update Filter Button */
+
+            filterButtons.forEach(button => {
+
+                button.classList.remove("active");
+
+
+                if(
+                    button.dataset.filter === selectedCategory
+                ){
+
+                    button.classList.add("active");
+
+                }
+
+            });
 
 
             filterDocuments();
 
 
-            if (documentLibrary) {
+            /* Scroll to Library */
+
+            if(documentLibrary){
 
                 documentLibrary.scrollIntoView({
 
@@ -209,79 +224,41 @@ function initDocumentLibrary() {
     });
 
 
+    /* Search Documents */
+
+    if(searchInput){
+
+        searchInput.addEventListener(
+            "input",
+            filterDocuments
+        );
+
+    }
+
+
+    /* Year Filter */
+
+    if(yearSelect){
+
+        yearSelect.addEventListener(
+            "change",
+            filterDocuments
+        );
+
+    }
+
+
     /* Initial Filter */
 
     filterDocuments();
 
-}
 
+    /* Refresh Icons */
 
-/* Active Filter */
+    if(typeof lucide !== "undefined"){
 
-function setActiveFilter(
-    filterButtons,
-    activeCategory
-) {
-
-    filterButtons.forEach((button) => {
-
-        const buttonFilter =
-            button.getAttribute("data-filter");
-
-
-        if (buttonFilter === activeCategory) {
-
-            button.classList.add("active");
-
-        } else {
-
-            button.classList.remove("active");
-
-        }
-
-    });
-
-}
-
-
-/* Show Document */
-
-function showDocument(card) {
-
-    card.classList.remove("document-hidden");
-
-}
-
-
-/* Hide Document */
-
-function hideDocument(card) {
-
-    card.classList.add("document-hidden");
-
-}
-
-
-/* Empty State */
-
-function updateEmptyState(
-    emptyState,
-    visibleDocuments
-) {
-
-    if (!emptyState) {
-        return;
-    }
-
-
-    if (visibleDocuments === 0) {
-
-        emptyState.hidden = false;
-
-    } else {
-
-        emptyState.hidden = true;
+        lucide.createIcons();
 
     }
 
-}
+});
